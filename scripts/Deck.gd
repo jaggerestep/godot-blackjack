@@ -10,7 +10,7 @@ var cardfactoryscene = preload('res://scenes/CardFactory.tscn')
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+
 	var cardfactory = cardfactoryscene.instance()
 	call_deferred("add_child", cardfactory)
 	cardfactory.createDeck()

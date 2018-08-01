@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/drag_button.gd" type="Script" id=1]
+
+[node name="drag_bar" type="Button" index="0"]
+modulate = Color( 1, 1, 1, 0.396078 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 300.0
+margin_bottom = 422.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Custom Colors", "Rect", "Visibility" ]
+
+[node name="button_overlay" type="ColorRect" parent="." index="0"]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = 76.0
+margin_right = 167.0
+margin_bottom = 316.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.25098, 0.333333, 0.235294, 0.364706 )
+
+[connection signal="gui_input" from="." to="." method="_on_drag_bar_gui_input"]
